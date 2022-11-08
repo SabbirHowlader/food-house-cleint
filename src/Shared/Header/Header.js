@@ -21,7 +21,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <img src={logo} alt="" style={{height:60, width:60}} className="rounded-full"/>
-                <a  href='/' className="btn btn-warning btn-ghost normal-case text-xl ">FOOD HOUSE</a>
+                <a  href='/' className="btn btn-ghost normal-case text-xl">FOOD HOUSE</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -29,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='/' className="btn ">Food Search</a>
+                <a href='/' className="btn  btn-ghost">Food Search</a>
             </div>
         </div>
     )
