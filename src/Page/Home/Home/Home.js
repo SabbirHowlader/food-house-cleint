@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutUs from '../AboutUs/AboutUs';
 import Slider from '../Slider/Slider';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <div className='items-center'>
                 <Slider></Slider>
+                <AboutUs></AboutUs>
             </div>
         </div>
     );
