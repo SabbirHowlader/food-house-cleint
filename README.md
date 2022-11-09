@@ -4,7 +4,7 @@
 2. use projet name icon and daynamic title.
 3. use mongodb for getting data.
 4. set privet route.
-5. for create project use react router dom, daisy ui, tailwind, firebase ect.  
+5. people can login and order their favourite item.  
 
 
 # Getting Started with Create React App
