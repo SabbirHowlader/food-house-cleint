@@ -1,3 +1,12 @@
+## Five features in this project
+
+1. use firebase Authentication.
+2. use projet name icon and daynamic title.
+3. use mongodb for gettin data.
+4. set privet route.
+5. for create project use react router dom, daisy ui, tailwind, firebase ect.  
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

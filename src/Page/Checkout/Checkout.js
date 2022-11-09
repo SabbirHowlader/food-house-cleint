@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+
 import { Link, useLoaderData } from 'react-router-dom';
 
-const Checkout = ({params}) => {
+const Checkout = () => {
     const { title, price, rating, detail, img } = useLoaderData();
     
     return (
@@ -10,7 +10,7 @@ const Checkout = ({params}) => {
             <div className='py-6'>
                 <h2 className='text-5xl font-bold mb-4' >{title}</h2>
                 <p className='text-2xl font-bold'>Price: {price}Tk</p>
-                <p className='text-2xl font-bold text-yellow-400'>Rating: {rating}</p>
+                <p className='text-2xl font-bold mb-5 text-yellow-400'>Rating: {rating}</p>
                 <p className='text-1xl'>{detail}</p>
             </div>
             <button className="btn btn-outline mb-5 btn-warning w-1/6 mx-auto"><Link to=''>Order Now</Link></button>

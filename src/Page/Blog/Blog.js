@@ -1,6 +1,9 @@
 import React from 'react';
+import useTitle from '../../Hook/useTitle';
 
 const Blog = () => {
+
+    useTitle('Blog')
     return (
         <div className='w-4/6 mx-auto text-left py-10'>
             <h5 className='font-bold mb-4'>1. What is the difference between sql and nosql?</h5>
