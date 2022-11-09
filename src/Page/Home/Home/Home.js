@@ -5,10 +5,8 @@ import Slider from '../Slider/Slider';
 const Home = () => {
     return (
         <div>
-            <div className='items-center'>
-                <Slider></Slider>
-                <AboutUs></AboutUs>
-            </div>
+            <Slider></Slider>
+            <AboutUs></AboutUs>
         </div>
     );
 };

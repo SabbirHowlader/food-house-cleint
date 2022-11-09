@@ -6,7 +6,7 @@ import img4 from '../../../Asset/slider/slider-4.jpg';
 
 const Slider = () => {
     return (
-        <div className="carousel w-5/6 py-10 mx-auto max-w-max " style={{ height: 600 }}>
+        <div className="carousel w-5/6 my-20 mx-auto max-w-max " style={{ height: 600 }}>
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={img1} className="w-full slider-img" alt='' />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
