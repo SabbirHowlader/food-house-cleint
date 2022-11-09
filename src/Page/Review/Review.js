@@ -25,10 +25,27 @@ const Review = () => {
             message,
         }
 
+        fetch('http://localhost:5000/services',{
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged){
+                alert('Review place successfully')
+                form.reset();
+            }
+        })
+        .catch(er => console.error(er));
+
     }
     return (
         <form onSubmit={handlePlaceReview} >
-            <h2 className='text-4xl text-orange-600 mb-4'>You are About to order {title}</h2>
+            <h2 className='text-4xl text-yellow-500 mb-4'>You are About to order {title}</h2>
             <h4 className='text-4xl font-bold mb-4'>Price: {price}Tk</h4>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
                 <input name="firstName" type="text" placeholder="Fast Name" className="input input-bordered w-full" />
