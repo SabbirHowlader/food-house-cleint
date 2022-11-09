@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Asset/logo/logo.jpg'
+import { AuthContext } from '../../Context/AuthContext/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch();
+    }
 
     const menubar =
         <>
             <li className='font-semibold'><Link to='/'>Home</Link></li>
             <li className='font-semibold'><Link to='/service'>Service</Link></li>
-            <li className='font-semibold'><Link to='/login'>Login</Link></li>
+            {/* <li className='font-semibold'><Link to='/login'>Login</Link></li> */}
             <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
+            {
+                user?.email ?
+                    <>
+                        {/* <li className='font-semibold'><Link to='/orders'>Orders</Link></li> */}
+                        <li className='font-semibold'>
+                            <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
+                        </li>
+                    </>
+                    :
+                    <li className='font-semibold'><Link to='/login'>Login</Link></li>
+            }
         </>
     return (
         <div className="navbar bg-base-300">
@@ -19,11 +37,11 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                       {menubar}
+                        {menubar}
                     </ul>
                 </div>
-                <img src={logo} alt="" style={{height:60, width:60}} className="rounded-full"/>
-                <a  href='/' className="btn btn-ghost normal-case text-xl">FOOD HOUSE</a>
+                <img src={logo} alt="" style={{ height: 60, width: 60 }} className="rounded-full" />
+                <a href='/' className="btn btn-ghost normal-case text-xl">FOOD HOUSE</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

@@ -10,7 +10,7 @@ const Service = () => {
     useEffect(() => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setServices(data));
     }, [])
     return (
         <div className='my-20 w-5/6 mx-auto'>
