@@ -1,5 +1,5 @@
 import React from 'react';
-import person from '../../../Asset/person/person img.jfif'
+import person from '../../../Asset/person/person-10.webp'
 const AboutUs = () => {
     return (
         <div className="hero min-h-screen w-5/6 mx-auto bg-base-200 my-20">
