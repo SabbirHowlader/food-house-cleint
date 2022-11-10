@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import img from '../../Asset/Login/login.jpg'
 import { AuthContext } from '../../Context/AuthContext/AuthProvider';
 import useTitle from '../../Hook/useTitle';
@@ -8,10 +8,6 @@ const Login = () => {
 
     const {login} = useContext(AuthContext);
     useTitle('Login')
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    const from = login.from?.pathname || '/';
 
     const handleLogin = event =>{
         event.preventDefault();
